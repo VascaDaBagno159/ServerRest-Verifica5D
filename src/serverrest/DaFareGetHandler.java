@@ -52,11 +52,11 @@ public class DaFareGetHandler implements HttpHandler {
             }
             
             // Parsing dei valori
-            String giocata = parametri.get("giocata") ;
-            String numero = String.valueOf(parametri.get("numero"));
+            String giocata = parametri.get("giocata");
+            int numero = Integer.parseInt(parametri.get("numero"));
             
             // Esegue la logica di calcolo
-            Boolean vittoria = DaFareService.logicaDiCalcolo();
+            Boolean vittoria = DaFareService.logicaDiCalcolo(numero,giocata);
             
             // Crea l'oggetto risposta
             DaFareResponse response = new DaFareResponse(

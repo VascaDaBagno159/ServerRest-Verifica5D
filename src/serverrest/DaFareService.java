@@ -11,15 +11,16 @@ package serverrest;
 public class DaFareService {
     
     /**
-     * Esegue l'operazione matematica richiesta
+     * Calcola se il numero è pari o dispari
      * 
-     * @param 
+     * @param numero
+     * @param giocata
      * @param 
      * @param 
      * @return 
      * @throws IllegalArgumentException se ...
      */
-    public static double logicaDiCalcolo() 
+    public static boolean logicaDiCalcolo(int numero,String giocata) 
             throws IllegalArgumentException {
         
        
@@ -34,12 +35,14 @@ public class DaFareService {
             throw new IllegalArgumentException(
                     "Opzione non valida. Opzione deve essere DA FARE");
         }
-         if()
         
-        
-        
-        
-        return vittoria ; // Placeholder, da sostituire con il risultato della logica di calcolo
+         if( numero % 2 == 0 ){
+            return true;
+         }else if(numero % 2 != 0 ){
+            return false;
+         }
+        return false;
+         
     }
 
     // Metodo di validazione dei parametri (da implementare)

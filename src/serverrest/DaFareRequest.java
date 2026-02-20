@@ -11,21 +11,21 @@ package serverrest;
 public class DaFareRequest {
     
     private String giocata;
-    private int numero;
+    private String numero;
     
     // Costruttore vuoto necessario per GSON
     public DaFareRequest() {
     }
     
     // Costruttore con parametri  
-     public DaFareRequest(String giocata, int numero) {
+     public DaFareRequest(String giocata, String numero) {
         this.giocata = giocata;
         this.numero = numero;
     }
    
 
     // Getter
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
     public String getGiocata() {
@@ -36,7 +36,7 @@ public class DaFareRequest {
         this.giocata = giocata;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 

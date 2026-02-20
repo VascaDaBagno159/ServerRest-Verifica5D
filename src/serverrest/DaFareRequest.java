@@ -18,7 +18,7 @@ public class DaFareRequest {
     }
     
     // Costruttore con parametri  
-     public DaFareRequest(String giocata, String numero) {
+    public DaFareRequest(String giocata, String numero) {
         this.giocata = giocata;
         this.numero = numero;
     }

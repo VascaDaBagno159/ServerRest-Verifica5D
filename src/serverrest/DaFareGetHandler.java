@@ -47,18 +47,22 @@ public class DaFareGetHandler implements HttpHandler {
             // Validazione parametri
             if (validazioneParametri(parametri)) {
                 inviaErrore(exchange, 400, 
-                    "Parametri mancanti. Necessari: operando1, operando2, operatore");
+                    "Parametri mancanti. Necessari: giocata, numero");
                 return;
             }
             
             // Parsing dei valori
-            
+            String giocata = parametri.get("giocata") ;
+            String numero = String.valueOf(parametri.get("numero"));
             
             // Esegue la logica di calcolo
-            double risultato = DaFareService.logicaDiCalcolo();
+            Boolean vittoria = DaFareService.logicaDiCalcolo();
             
             // Crea l'oggetto risposta
             DaFareResponse response = new DaFareResponse(
+               giocata,
+               numero,
+               vittoria
             );
             
             // GSON converte automaticamente l'oggetto Java in JSON

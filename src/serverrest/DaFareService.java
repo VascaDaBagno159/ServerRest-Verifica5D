@@ -22,6 +22,7 @@ public class DaFareService {
     public static double logicaDiCalcolo() 
             throws IllegalArgumentException {
         
+       
         // Controllo se i parametri passati sono validi
                 if (!parametriValidi()) {
             throw new IllegalArgumentException("Operatore non può essere vuoto");
@@ -33,12 +34,18 @@ public class DaFareService {
             throw new IllegalArgumentException(
                     "Opzione non valida. Opzione deve essere DA FARE");
         }
-        return 0; // Placeholder, da sostituire con il risultato della logica di calcolo
+         if()
+        
+        
+        
+        
+        return vittoria ; // Placeholder, da sostituire con il risultato della logica di calcolo
     }
 
     // Metodo di validazione dei parametri (da implementare)
     private static boolean parametriValidi()
     {
+        
         return false;
     }
 }

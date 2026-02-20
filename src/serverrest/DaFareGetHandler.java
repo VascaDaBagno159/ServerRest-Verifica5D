@@ -81,7 +81,10 @@ public class DaFareGetHandler implements HttpHandler {
 
     // Validazione dei parametri (da implementare)
     private boolean validazioneParametri(Map<String, String> parametri) {
-        
+        if(parametri.containsKey("numero") || 
+          (parametri.containsKey("giocata"))){
+           return true;     
+        }
         return false;
     }
     
